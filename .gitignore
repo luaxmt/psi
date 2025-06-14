@@ -1,2 +1,24 @@
+# Hugo output
+/public/
+/resources/_gen/
+/hugo_stats.json
+
+# Dependency directories
+/node_modules/
+
+# OS generated files
 .DS_Store
-/public
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Local build artifacts
+/dist/
+/tmp/
+
+# Cache
+/.cache/
