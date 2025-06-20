@@ -1,10 +1,11 @@
 <!-- About -->
 <section class="banner {{ .style }}">
-  <div class="content">
+  <div class="content" style="position: relative;">
     {{ with .title }}<h1>{{ . }}</h1>{{ end }}
     {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
+    <div class="text-background"></div>
   </div>
-  {{ with .image }}<div class="image">
+  {{ with .image }}<div class="image" style="background-color: transparent;">
     <img src="{{.}}" alt="Hugo Story" />
   </div>{{end}}
 </section>
