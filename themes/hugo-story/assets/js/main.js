@@ -6,6 +6,7 @@
 */
 
 (function($) {
+	var year = new Date().getFullYear()
 
 	var	$window = $(window),
 		$body = $('body'),
@@ -338,5 +339,7 @@
 							}, 275);
 
 						});
+
+					document.querySelector('[data-text=year]').textContent = year
 
 })(jQuery);
