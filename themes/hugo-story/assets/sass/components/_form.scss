@@ -39,6 +39,10 @@
 				&.quarter {
 					width: calc(25% - #{$gutter * 0.25});
 				}
+
+				&.small-padding {
+					padding: 4px 0 0 $gutter;
+				}
 			}
 		}
 

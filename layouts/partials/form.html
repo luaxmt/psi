@@ -10,14 +10,18 @@
         <form method="post" action="#">
           <div class="fields">
             <div class="field half">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" value="" />
+              <label for="name">Nome Completo</label>
+              <input type="text" name="name" id="name" value="" required />
             </div>
             <div class="field half">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" value="" />
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" value="" required />
             </div>
-            <div class="field">
+            <div class="field half">
+              <label for="email">Telefone (Whatsapp)</label>
+              <input type="tel" name="phone" placeholder="(__) _____-____" />
+            </div>
+            <!-- <div class="field">
               <label for="department">Department</label>
               <select name="department" id="department">
                 <option value="">- Category -</option>
@@ -26,34 +30,34 @@
                 <option value="3">Administration</option>
                 <option value="4">Human Resources</option>
               </select>
-            </div>
-            <div class="field third">
-              <input type="radio" id="priority-low" name="priority" checked />
-              <label for="priority-low">Low Priority</label>
-            </div>
-            <div class="field third">
-              <input type="radio" id="priority-normal" name="priority" />
-              <label for="priority-normal">Normal Priority</label>
-            </div>
-            <div class="field third">
-              <input type="radio" id="priority-high" name="priority" />
-              <label for="priority-high">High Priority</label>
-            </div>
+            </div> -->
+
             <div class="field">
-              <label for="message">Message</label>
+              <label for="message">Mensagem</label>
               <textarea name="message" id="message" rows="6"></textarea>
             </div>
-            <div class="field half">
+            <div class="field">
+              <label for="email">Como você prefere que eu entre em contato?</label>
+            </div>
+            <div class="field small-padding">
+              <input type="checkbox" id="email-checkbox" name="priority" checked />
+              <label for="email-checkbox">E-mail</label>
+            </div>
+            <div class="field small-padding">
+              <input type="checkbox" id="phone" name="priority" checked />
+              <label for="phone">Telefone</label>
+            </div>
+            <div class="field small-padding">
+              <input type="checkbox" id="whatsapp" name="priority" checked />
+              <label for="whatsapp">Whatsapp</label>
+            </div>
+            <!-- <div class="field half">
               <input type="checkbox" id="copy" name="copy" />
               <label for="copy">Email me a copy of this message</label>
-            </div>
-            <div class="field half">
-              <input type="checkbox" id="human" name="human" checked />
-              <label for="human">I am a human and not a robot</label>
-            </div>
+            </div> -->
           </div>
           <ul class="actions">
-            <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+            <li><input type="submit" name="submit" id="submit" value="Enviar" /></li>
           </ul>
         </form>
 
