@@ -29,6 +29,36 @@
 			}, 100);
 		});
 
+	// Navigation menu scroll behavior
+		var $nav = $('#main-nav');
+		var scrollThreshold = 100; // Show menu after scrolling 100px
+		var lastScrollTop = 0;
+
+		$window.on('scroll', function() {
+			var scrollTop = $(this).scrollTop();
+			
+			// Show/hide menu based on scroll position
+			if (scrollTop > scrollThreshold) {
+				$nav.addClass('nav-visible');
+			} else {
+				$nav.removeClass('nav-visible');
+			}
+			
+			lastScrollTop = scrollTop;
+		});
+
+	// Mobile menu toggle
+		$('.nav-toggle').on('click', function() {
+			$(this).toggleClass('active');
+			$('.nav-menu').toggleClass('active');
+		});
+
+	// Close mobile menu when clicking on a link
+		$('.nav-link').on('click', function() {
+			$('.nav-toggle').removeClass('active');
+			$('.nav-menu').removeClass('active');
+		});
+
 	// Browser fixes.
 
 		// IE: Flexbox min-height bug.

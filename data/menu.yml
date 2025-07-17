@@ -1,2 +1,19 @@
 ####################### Menu #########################
 style: "style1 orient-center content-align-center fullscreen onload-image-fade-in onload-content-fade-up" 
+
+items:
+  - name: "Início"
+    url: "#home"
+    weight: 1
+
+  - name: "Sobre"
+    url: "#about"
+    weight: 2
+
+  - name: "Atendimentos"
+    url: "#care"
+    weight: 3
+
+  - name: "Contato"
+    url: "#contact"
+    weight: 5

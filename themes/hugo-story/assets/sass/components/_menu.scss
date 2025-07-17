@@ -5,10 +5,17 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  transform: translateY(-100%); /* Hide menu by default */
+  opacity: 0;
+
+  &.nav-visible {
+    transform: translateY(0); /* Show menu when scrolled */
+    opacity: 1;
+  }
 
   .nav-container {
     max-width: 1200px;
@@ -28,12 +35,14 @@
     a {
       font-size: 1.5rem;
       font-weight: bold;
-      color: _palette(accent1);
+      // color: _palette(accent1);
+      color: #819a7c;
       text-decoration: none;
       transition: color 0.3s ease;
 
       &:hover {
-        color: _palette(accent2);
+        // color: _palette(accent2);
+        color: #6da562;
       }
     }
   }
@@ -128,13 +137,3 @@
     }
   }
 }
-
-/* Adjust body padding for fixed nav */
-body {
-  padding-top: 60px;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-} 
